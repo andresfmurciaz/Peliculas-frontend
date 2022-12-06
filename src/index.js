@@ -3,8 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import {Pelicula} from './Pelicula'
-import { Header,Menu } from './Header';
-
+import { Header,Menu } from './components/Header';
+import './css/bootstrap.min.css'
+import './css/bootstrap.min.css.map'
 
 
 
@@ -15,8 +16,16 @@ root.render(
 <div>
 <Menu/>
 <Header/>
+<div class ="row my-2">
+  <div className="container">
+    <div className="row align-center">
+      <div className = "col-m-100">
+        <Pelicula titulo="Tiburon 3" duracion = {4} actores = {[{nombre:"camila"},{nombre:"anita"}]}  calificacion ={4}  />
 
-  <Pelicula titulo="Tiburon 3" duracion = {4} actores = {[{nombre:"camila"},{nombre:"anita"}]}/>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 );
