@@ -1,31 +1,26 @@
 export  function Pelicula(props){
 
+return<>
+<div className = "col-3">
+<div class="card" >
+  <img src={props.imagen} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h5 class="card-title">{props.titulo}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{props.tipo}</li>
+    <li class="list-group-item">{props.anio}</li>
+    <li class="list-group-item">{props.duracion}</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
 
-
-
-
-const titulo="chuky"
-const anio =1928
-const genero = "drama"
-const resena = "pelicula de miedo de un muñeco ata gente"
-
-
-
-function reparto(actores){
-let text = ""
-actores.forEach(element => {
-    text += element.nombre + ","
-
-});
-return text
-
-}
-
-return<div>
-<h1>{titulo}</h1>
-<h5>{anio}</h5>
-<h3>{genero} - {resena}</h3>
-<h1>Duracion:{props.duracion}</h1>
-<h1>{reparto(props.actores)}</h1>
+  </div>
 </div>
+</div>
+
+</>
 }
+
+

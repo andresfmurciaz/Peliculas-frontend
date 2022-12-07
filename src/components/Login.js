@@ -15,7 +15,7 @@ return<>
       <label for="floatingInput">Usuario</label>
     </div>
 
-    <div class="checkbox mb-2">
+    <div class="checkbox mb-">
       
       </div>
 
