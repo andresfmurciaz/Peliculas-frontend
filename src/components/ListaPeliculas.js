@@ -2,6 +2,15 @@
 import {Pelicula} from './Pelicula'
 
 export function ListaPeliculas(){
+
+fetch("http://localhost:3000/api/items")
+.then(response=>response.json())
+.then(data=>{console.log(data)})
+
+.catch(err =>  console.log("error" + err))
+
+
+
     return<>
 <div className ="row my-2">
   <div className="container">
