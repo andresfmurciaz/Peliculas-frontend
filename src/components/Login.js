@@ -6,6 +6,11 @@ console.log(ev.target.value)
 
 }
 
+const handleSubmit =(ev)=>{
+
+ev.preventDefault()
+console.log("enviando datos")
+}
 
 return<>
 
@@ -14,7 +19,7 @@ return<>
 <body class="container-fluid">
 <div class="col-md-4 offset-4">
 <main class="form-signin w-100 m-auto">
-  <form >
+  <form onSubmit={handleSubmit}>
   <div class="checkbox mb-3">
       
       </div>
@@ -43,7 +48,7 @@ return<>
     <div class="checkbox mb-3">
       
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="button" onClick={function(){console.log('holka')}}>Entrar</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" onClick={function(){console.log('holka')}}>Entrar</button>
    
   </form>
 </main>
