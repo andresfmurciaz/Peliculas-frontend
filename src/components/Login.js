@@ -1,45 +1,41 @@
 import {useRef} from 'react'
-import swal from 'sweetalert2'
+//import {useState,useEffect} from 'react'
+//import swal from 'sweetalert2'
 export function Login(){
 const correoRef = useRef()
-
+const contrasenaRef = useRef()
 //captura el evento de casilla
 const hadleChange= (ev)=>{console.log(ev.target.value)}
-
 //crear evento que capture los don valores se declara en el formulario
-const handleSubmit =(ev)=>{
-
+const handleSubmit =(ev)=>{   
 ev.preventDefault()
-
 console.log("enviando datos")
-//guarda correo
-const correo= correoRef.current.value
-console.log("correo" + correo)
-if(correo==="admin@h"){
+//capturo el dato que me digitan
+const  correo= correoRef.current.value
+const contrasena = contrasenaRef.current.value
+//creao un avriable para tener los dos datos
+const usuario={
+'correo':correo,
+'contrasena':contrasena
+}
 
-swal.fire({
-  title:"Validacion",
-  text:"Datos Correctos",
-  icon:"success"
-})
-
-}else{
-  swal.fire({
-    title:"Validacion",
-    text:"Datos incorrectos",
-    icon:"error"
-  })
+const  options={
+method :"POST",
+body : JSON.stringify(usuario),
+headers:{
+"Content-Type" :"application/json"
+}
 }
 
 
+fetch("http://localhost:3000/api/usuarios/login",options)
+.then(response => response.json())
+.then(data=>{console.log(data)})
+.catch(err=>console.log(err))
+
+
 }
-
-return<>
-
-
-
-<body class="container-fluid">
-<div class="col-md-4 offset-4">
+return<div class="col-md-4 offset-4">
 <main class="form-signin w-100 m-auto">
   <form onSubmit={handleSubmit}>
   <div class="checkbox mb-3">
@@ -63,7 +59,7 @@ return<>
       </div>
 
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" onChange={hadleChange}/>
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" onChange={hadleChange} ref={contrasenaRef}/>
       <label for="floatingPassword">Contraseña</label>
     </div>
 
@@ -75,8 +71,8 @@ return<>
   </form>
 </main>
 </div>
-</body>
-</>
+
+
 
 
 
