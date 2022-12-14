@@ -41,7 +41,16 @@ fetch("http://localhost:3000/api/usuarios/login",options)
 .then(data=>{ console.log(data)
  if(data.msj === 'ok'){
 
-  naviga ('/Tablero')
+
+ 
+//se usa paara guardar el token en el navegador clave valor
+
+naviga ('/Tablero')
+
+localStorage.setItem("token",data.token)
+
+const token =localStorage.getItem("token")
+console.log("token" + token)
 
  }else{
 
