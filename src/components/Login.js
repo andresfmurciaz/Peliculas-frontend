@@ -1,7 +1,14 @@
 import {useRef} from 'react'
+import {useNavigate} from 'react-router-dom'
+import swal from 'sweetalert2'
+
+
+//import Swal from 'sweetalert2'
 //import {useState,useEffect} from 'react'
-//import swal from 'sweetalert2'
+
 export function Login(){
+  
+const naviga= useNavigate()
 const correoRef = useRef()
 const contrasenaRef = useRef()
 //captura el evento de casilla
@@ -30,7 +37,18 @@ headers:{
 
 fetch("http://localhost:3000/api/usuarios/login",options)
 .then(response => response.json())
-.then(data=>{console.log(data)})
+.then(data=>{ console.log(data)
+ if(data.msj == 'ok'){
+
+  naviga ='/tablero'
+
+ }else{
+
+    swal("equivocado mi rey")
+
+}
+
+})
 .catch(err=>console.log(err))
 
 
