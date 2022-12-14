@@ -1,16 +1,17 @@
 import {useRef} from 'react'
 import {useNavigate} from 'react-router-dom'
-import swal from 'sweetalert2'
-
+import Swal from 'sweetalert2'
 
 //import Swal from 'sweetalert2'
 //import {useState,useEffect} from 'react'
 
 export function Login(){
   
-const naviga= useNavigate()
+
 const correoRef = useRef()
 const contrasenaRef = useRef()
+const naviga= useNavigate()
+
 //captura el evento de casilla
 const hadleChange= (ev)=>{console.log(ev.target.value)}
 //crear evento que capture los don valores se declara en el formulario
@@ -38,14 +39,18 @@ headers:{
 fetch("http://localhost:3000/api/usuarios/login",options)
 .then(response => response.json())
 .then(data=>{ console.log(data)
- if(data.msj == 'ok'){
+ if(data.msj === 'ok'){
 
-  naviga ='/tablero'
+  naviga ('/Tablero')
 
  }else{
 
-    swal("equivocado mi rey")
-
+  Swal.fire({
+    icon: 'error',
+    title: 'error usuario...',
+    text: 'usuario o contraseña erronea!',
+    
+  })
 }
 
 })
