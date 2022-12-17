@@ -29,8 +29,8 @@ export function ListaPeliculas(){
     return<>
 <div className ="row my-4">
   <div className="container">
-    <div className="row align-center">
-      <div className = "col-m-1">
+    
+      <div className = "col-m-9">
         
         <div className='row'>
       {items.map(dato=>(
@@ -49,7 +49,7 @@ export function ListaPeliculas(){
           </div>
 
 
-        </div>
+        
       </div>
     </div>
   </div>

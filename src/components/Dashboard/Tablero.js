@@ -1,8 +1,11 @@
 
 
 import {useEffect} from 'react' 
+import {Routes,Route,Link} from 'react-router-dom'
 
+import { GenerosList } from '../Generos/GenerosList'
 import {useNavigate} from 'react-router-dom'
+import { ListaPeliculas } from '../ListaPeliculas'
 export function Tablero(){
 //guardo el token que ya esta generado en el login
  //   const token = localStorage.getItem("tokrn")
@@ -33,8 +36,57 @@ navigate  ('/login')
 
 }
 
-    return<>  <h1>hola tablero </h1>
-    <button onClick={hadleCerrar}>cerrar</button>
+    return<>  <h1> hola tablero </h1>
+  
+<div className='row'>
+
+<div className='col-1'>
+
+hola
+<ul>
+    <li>
+        <Link to="/Tablero/generosList">Generos</Link>     
+    </li>
+    
+</ul>
+
+</div>
+
+<div className='col-1'>
+
+<Routes>
+
+    <Route path ="/generosList" element = {<GenerosList/>}> </Route>
+
+
+</Routes>
+</div>
+
+</div>
+
+
+
+
+
+
+<div>
+
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+</div>
+
+
+
+    <div class="checkbox mb-2">
+      
+      </div>
+
+    
+<button onClick={hadleCerrar}>cerrar</button>
+
 
     </>
 
