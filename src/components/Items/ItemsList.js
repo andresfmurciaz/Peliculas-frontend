@@ -25,13 +25,39 @@ useEffect(()=>{
 
 //se crea una tabla mostrando los datos en este caso nombre 
 return <>
-<table>
-    {items.map(dato=>(
-        <tr>
-            <td>{dato.titulo}</td>
-        </tr>
+
+
+
+<table class="table col-md-8 offset-8">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Año</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      {items.map(dato=>(   
+       <tr>
+       <th scope="row">1</th>
+       <td>{dato.titulo} </td>
+       <td>{dato.tipo} </td>
+       <td>{dato.ano} </td>
+       </tr>
+
+
         ))}
+       
+    
+    
+   
+  </tbody>
 </table>
+
+
 
 </>
 

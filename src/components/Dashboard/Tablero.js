@@ -38,23 +38,49 @@ navigate  ('/login')
 
 }
 
+const navegaGenero =()=>{
+  
+    navigate  ('/Tablero/generosList')
+    
+    }
+
+
+    
+const navegaItems =()=>{
+  
+    navigate  ('/Tablero/itemsList')
+    
+    }
+    
+
+    
+const navegaUsuario =()=>{
+  
+    navigate  ('/Tablero/usuariosList')
+    
+    }
+    
+    
+
     return<>  <h1> hola tablero </h1>
   
 <div className='row'>
 
 <div className='col-1'>
 
-hola
+
 <ul>
-    <li>
-        <Link to="/Tablero/generosList">Generos</Link>     
-    </li>
-    <li>
-        <Link to="/Tablero/itemsList">Items</Link>     
-    </li>
-    <li>
-        <Link to="/Tablero/usuariosList">Usuario</Link>     
-    </li>
+    
+    <button type="button" onClick={navegaGenero} class="btn btn-outline-primary">Genero</button>  
+    
+    <div class="checkbox mb-2"> </div>
+
+    <button type="button" onClick={navegaItems} class="btn btn-outline-primary">Items</button>     
+    
+    <div class="checkbox mb-2"> </div>
+    
+    <button type="button" onClick={navegaUsuario} class="btn btn-outline-primary">Usuario</button>      
+    
     
 </ul>
 
@@ -65,38 +91,21 @@ hola
 <Routes>
 
     <Route path ="/generosList" element = {<GenerosList/>}> </Route>
+    
+
     <Route path ="/itemsList" element = {<ItemsList/>}> </Route>
+    
     <Route path ="/usuariosList" element = {<UsuariosList/>}> </Route>
 
 
 </Routes>
 </div>
 
-</div>
-
-
-
-
-
-
-<div>
-
-<button type="button" class="btn btn-outline-primary">Primary</button>
-<button type="button" class="btn btn-outline-secondary">Secondary</button>
-<button type="button" class="btn btn-outline-success">Success</button>
-<button type="button" class="btn btn-outline-danger">Danger</button>
-<button type="button" class="btn btn-outline-warning">Warning</button>
-</div>
-
-
-
-    <div class="checkbox mb-2">
-      
-      </div>
+</div><div class="checkbox mb-2"> </div>
 
     
-<button onClick={hadleCerrar}>cerrar</button>
 
+<button type="button"  onClick={hadleCerrar} class="btn btn-outline-danger">cerrar</button>
 
     </>
 

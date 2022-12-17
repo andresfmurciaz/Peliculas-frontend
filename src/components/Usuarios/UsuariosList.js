@@ -25,13 +25,40 @@ useEffect(()=>{
 
 //se crea una tabla mostrando los datos en este caso nombre 
 return <>
-<table>
-    {usuarios.map(dato=>(
-        <tr>
-            <td>{dato.nombre}</td>
-        </tr>
+
+
+<table class="table col-md-8 offset-8">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">nombre</th>
+      <th scope="col">correo</th>
+      <th scope="col">contrasena</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      {usuarios.map(dato=>(   
+       <tr>
+       <th scope="row">{1}</th>
+       <td>{dato.nombre} </td>
+       <td>{dato.correo} </td>
+       <td>{dato.contrasena} </td>
+       </tr>
+
+
         ))}
+       
+    
+    
+   
+  </tbody>
 </table>
+
+
+
 
 </>
 

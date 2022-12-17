@@ -25,13 +25,37 @@ useEffect(()=>{
 
 //se crea una tabla mostrando los datos en este caso nombre 
 return <>
-<table>
-    {generos.map(dato=>(
-        <tr>
-            <td>{dato.nombre}</td>
-        </tr>
+
+
+
+
+<table class="table col-md-8 offset-8">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">nombre</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      {generos.map(dato=>(   
+       <tr>
+       <th scope="row">1</th>
+       <td>{dato.nombre} </td>
+      
+       </tr>
+
+
         ))}
+       
+    
+    
+   
+  </tbody>
 </table>
+
 
 </>
 
