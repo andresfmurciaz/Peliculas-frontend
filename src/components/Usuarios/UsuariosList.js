@@ -34,7 +34,9 @@ return <>
       <th scope="col">nombre</th>
       <th scope="col">correo</th>
       <th scope="col">contrasena</th>
+      <th scope="col">acciones</th>
       
+
     </tr>
   </thead>
   <tbody>
@@ -46,6 +48,8 @@ return <>
        <td>{dato.nombre} </td>
        <td>{dato.correo} </td>
        <td>{dato.contrasena} </td>
+       <button type="button" class="btn btn-outline-primary">Editar</button>  
+    
        </tr>
 
 

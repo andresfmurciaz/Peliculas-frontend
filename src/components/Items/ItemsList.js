@@ -46,6 +46,8 @@ return <>
        <td>{dato.titulo} </td>
        <td>{dato.tipo} </td>
        <td>{dato.ano} </td>
+       <button type="button" class="btn btn-outline-primary">Editar</button>  
+    
        </tr>
 
 

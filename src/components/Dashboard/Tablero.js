@@ -68,11 +68,11 @@ const navegaUsuario =()=>{
 
 <div className='col-1'>
 
-
 <ul>
     
+<div className='col-1'>
     <button type="button" onClick={navegaGenero} class="btn btn-outline-primary">Genero</button>  
-    
+ 
     <div class="checkbox mb-2"> </div>
 
     <button type="button" onClick={navegaItems} class="btn btn-outline-primary">Items</button>     
@@ -81,7 +81,7 @@ const navegaUsuario =()=>{
     
     <button type="button" onClick={navegaUsuario} class="btn btn-outline-primary">Usuario</button>      
     
-    
+    </div>   
 </ul>
 
 </div>

@@ -44,6 +44,8 @@ return <>
        <tr>
        <th scope="row">1</th>
        <td>{dato.nombre} </td>
+       <button type="button" class="btn btn-outline-primary">Editar</button>  
+    
       
        </tr>
 
