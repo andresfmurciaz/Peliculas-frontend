@@ -4,6 +4,8 @@ import {useEffect} from 'react'
 import {Routes,Route,Link} from 'react-router-dom'
 
 import { GenerosList } from '../Generos/GenerosList'
+import { ItemsList } from '../Items/ItemsList'
+import { UsuariosList } from '../Usuarios/UsuariosList'
 import {useNavigate} from 'react-router-dom'
 import { ListaPeliculas } from '../ListaPeliculas'
 export function Tablero(){
@@ -47,6 +49,12 @@ hola
     <li>
         <Link to="/Tablero/generosList">Generos</Link>     
     </li>
+    <li>
+        <Link to="/Tablero/itemsList">Items</Link>     
+    </li>
+    <li>
+        <Link to="/Tablero/usuariosList">Usuario</Link>     
+    </li>
     
 </ul>
 
@@ -57,6 +65,8 @@ hola
 <Routes>
 
     <Route path ="/generosList" element = {<GenerosList/>}> </Route>
+    <Route path ="/itemsList" element = {<ItemsList/>}> </Route>
+    <Route path ="/usuariosList" element = {<UsuariosList/>}> </Route>
 
 
 </Routes>
