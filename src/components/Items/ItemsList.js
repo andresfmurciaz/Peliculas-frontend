@@ -16,6 +16,10 @@ function cargar ()
   }
 
 
+
+
+  
+
 //para tner un arden y correr losmetodos que estan en el use effect
 useEffect(()=>{
     cargar()
@@ -47,7 +51,7 @@ return <>
        <td>{dato.tipo} </td>
        <td>{dato.ano} </td>
 
-       <td><Link to={`/tablero/itemsEditar${dato._id}`} >Editar</Link></td>  
+       <td><Link to={`/Tablero/itemsEditar/${dato._id}`} >Editar</Link></td>  
     
        </tr>
 
