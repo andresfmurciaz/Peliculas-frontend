@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react";
-
+import { Link } from 'react-router-dom'
 export function ItemsList(){
 const [items,setItems ]= useState([])
 
@@ -46,7 +46,8 @@ return <>
        <td>{dato.titulo} </td>
        <td>{dato.tipo} </td>
        <td>{dato.ano} </td>
-       <button type="button" class="btn btn-outline-primary">Editar</button>  
+
+       <td><Link to={`/tablero/itemsEditar${dato._id}`} >Editar</Link></td>  
     
        </tr>
 

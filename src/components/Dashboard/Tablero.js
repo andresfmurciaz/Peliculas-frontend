@@ -8,6 +8,7 @@ import { ItemsList } from '../Items/ItemsList'
 import { UsuariosList } from '../Usuarios/UsuariosList'
 import {useNavigate} from 'react-router-dom'
 import { ListaPeliculas } from '../ListaPeliculas'
+import { ItemsEditar } from '../Items/itemsEditar'
 export function Tablero(){
 //guardo el token que ya esta generado en el login
  //   const token = localStorage.getItem("tokrn")
@@ -94,6 +95,8 @@ const navegaUsuario =()=>{
     
 
     <Route path ="/itemsList" element = {<ItemsList/>}> </Route>
+    <Route path ="/itemsEditar/:id" element = {<ItemsEditar/>}> </Route>
+
     
     <Route path ="/usuariosList" element = {<UsuariosList/>}> </Route>
 
